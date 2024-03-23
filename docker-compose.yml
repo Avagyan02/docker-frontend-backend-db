@@ -1,7 +1,7 @@
-version: "4.4"
+version: "4.5"
 services:
   web:
-    image: samavgn02/docker-frontend:5899457
+    image: samavgn02/docker-frontend:ea2f071
     depends_on:
       - api
     ports:
