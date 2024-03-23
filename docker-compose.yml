@@ -1,4 +1,4 @@
-version: "3.9"
+version: "4.0"
 services:
   web:
     image: samavgn02/docker-backend:9558095
@@ -9,7 +9,7 @@ services:
     networks:
       - network-backend
   api:
-    image: samavgn02/docker-backend:0b1f90f
+    image: samavgn02/docker-backend:6c82417
     depends_on:
       - mongo
     ports:
