@@ -13,6 +13,6 @@ if [ -z "$current_version" ]; then
     exit 1
 fi
 
-new_version=$(echo "$current_version + 0.1" | bc)
+new_version=$(echo "$current_version + 0.1" | /usr/bin/bc)
 sed -i "s/^version:.*/version: \"$new_version\"/" "$compose_file"
 echo "Docker Compose file version updated to 1 in $compose_file"
