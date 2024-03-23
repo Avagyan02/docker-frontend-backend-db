@@ -9,7 +9,7 @@ services:
     networks:
       - network-backend
   api:
-    image: 
+    image: samavgn02/docker-backend:0b1f90f
     depends_on:
       - mongo
     ports:
@@ -18,7 +18,7 @@ services:
      - network-backend
   
   mongo:
-    image: 
+    image: mongo
     restart: always
     volumes: 
       - mongodb_data:/data/db
