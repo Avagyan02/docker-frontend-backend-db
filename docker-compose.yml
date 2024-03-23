@@ -9,7 +9,7 @@ services:
     networks:
       - network-backend
   api:
-    image: null/docker-backend:ac503d1
+    image: samavgn02/docker-backend:50051c5
     depends_on:
       - mongo
     ports:
