@@ -1,8 +1,7 @@
 version: "3.8"
 services:
   web:
-    build: samavgn02/docker-frontend:1f28b32
-
+    image: "samavgn02/docker-frontend:1f28b32"
     depends_on:
       - api
     ports:
@@ -10,7 +9,7 @@ services:
     networks:
       - network-backend
   api:
-    build: samavgn02/docker-backend:0b1f90f
+    image: "samavgn02/docker-backend:0b1f90f"
     depends_on:
       - mongo
     ports:
