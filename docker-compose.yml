@@ -1,4 +1,4 @@
-version: "4.0"
+version: "3.8"
 services:
   web:
     image: samavgn02/docker-backend:9558095
