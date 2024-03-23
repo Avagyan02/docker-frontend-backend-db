@@ -1,4 +1,4 @@
-version: "1.1"
+version: "3.8"
 services:
   web:
     image: samavgn02/docker-frontend:b8517d4
