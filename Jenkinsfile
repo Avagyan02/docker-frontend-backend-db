@@ -12,6 +12,7 @@ pipeline {
             steps {
                 script {
                     // sh 'docker-compose down '
+                    echo 'a'
                 }
             }
         }
@@ -20,6 +21,7 @@ pipeline {
             steps {
                 script {
                     // sh 'docker-compose up '
+                    echo '1'
                 }
             }
         }
