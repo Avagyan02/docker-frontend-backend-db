@@ -13,7 +13,7 @@ pipeline {
                 script {
                     sh 'cd /var/jenkins_home/workspace'
                     sh 'ls -la'
-                    // sh 'docker-compose down '
+                    sh 'docker-compose down'
                     echo 'a'
                 }
             }
@@ -22,7 +22,7 @@ pipeline {
         stage('Compose Up') {
             steps {
                 script {
-                    // sh 'docker-compose up '
+                    sh 'docker-compose up'
                     echo '1'
                 }
             }
