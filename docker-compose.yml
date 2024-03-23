@@ -1,7 +1,7 @@
-version: "4.0"
+version: "4.1"
 services:
   web:
-    image: "samavgn02/docker-frontend:1f28b32"
+    image: 
     depends_on:
       - api
     ports:
@@ -9,7 +9,7 @@ services:
     networks:
       - network-backend
   api:
-    image: "samavgn02/docker-backend:0b1f90f"
+    image: 
     depends_on:
       - mongo
     ports:
@@ -18,7 +18,7 @@ services:
      - network-backend
   
   mongo:
-    image: mongo
+    image: 
     restart: always
     volumes: 
       - mongodb_data:/data/db
