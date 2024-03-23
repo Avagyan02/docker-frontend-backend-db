@@ -19,7 +19,7 @@ pipeline {
         stage('Compose Up') {
             steps {
                 script {
-                    sh 'docker-compose down '
+                    sh 'docker-compose up '
                 }
             }
         }
