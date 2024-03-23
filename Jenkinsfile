@@ -11,6 +11,8 @@ pipeline {
         stage('Compose Down') {
             steps {
                 script {
+                    sh 'cd /var/jenkins_home/workspace'
+                    sh 'ls -la'
                     // sh 'docker-compose down '
                     echo 'a'
                 }
