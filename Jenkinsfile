@@ -3,7 +3,7 @@ pipeline {
 
     triggers {
         GenericTrigger(
-            token: 'docker-frontend-token' 
+            token: 'docker-devops-token' 
         )
     }
     
@@ -11,10 +11,7 @@ pipeline {
         stage('Compose Down') {
             steps {
                 script {
-                    sh 'cd /var/jenkins_home/workspace'
-                    sh 'ls -la'
                     sh 'docker-compose down'
-                    echo 'a'
                 }
             }
         }
@@ -24,7 +21,6 @@ pipeline {
                 script {
                     sh "bash docker-compose-file-version-change.sh"                    
                     sh 'docker-compose up'
-                    echo '1'
                 }
             }
         }
