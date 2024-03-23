@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COMPOSE_FILE="${pwd}/docker-compose.yml"
+COMPOSE_FILE="${PWD}/docker-compose.yml"
 SERVICE_NAME="api"
 NEW_BUILD_VALUE=$1
 

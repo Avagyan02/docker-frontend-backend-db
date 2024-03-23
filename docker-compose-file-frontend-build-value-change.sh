@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COMPOSE_FILE="${pwd}/docker-compose.yml"
+COMPOSE_FILE="${PWD}/docker-compose.yml"
 SERVICE_NAME="web"
 NEW_BUILD_VALUE=$1
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-compose_file="${pwd}/docker-compose.yml"
+compose_file="${PWD}/docker-compose.yml"
 current_version=$(awk '/^version:/ { print $2 }' "$compose_file" | tr -d '"')
 
 if [ ! -f "$compose_file" ]; then
