@@ -22,6 +22,7 @@ pipeline {
         stage('Compose Up') {
             steps {
                 script {
+                    sh "bash docker-compose-file-version-change.sh"                    
                     sh 'docker-compose up'
                     echo '1'
                 }
