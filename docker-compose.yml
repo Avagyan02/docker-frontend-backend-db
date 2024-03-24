@@ -1,4 +1,4 @@
-version: "4.0"
+version: "3.8"
 services:
   web:
     image: samavgn02/docker-frontend:b580d1e
@@ -6,6 +6,8 @@ services:
       - api
     ports:
       - "3000:3000"
+    env_file:
+      - .env-frontend
     networks:
       - network-backend
   api:
@@ -14,18 +16,21 @@ services:
       - mongo
     ports:
       - "3001:3001"
+    env_file:
+      - .env-backend
     networks: 
-     - network-backend
+      - network-backend
   
   mongo:
     image: mongo
     restart: always
+    ports:
+      - "27017:27017"
     volumes: 
       - mongodb_data:/data/db
-    environment: 
-      MONGODB_INITDB_ROOT_USERNAME: username
-      MONGODB_INITDB_ROOT_PASSWORD: password
-    networks: 
+    env_file:
+      - .env-db
+    networks:
      - network-backend
 
 networks:
