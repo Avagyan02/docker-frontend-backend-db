@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   web:
-    image: samavgn02/docker-frontend:8eda06e
+    image: samavgn02/docker-frontend:98e81d6
     depends_on:
       - api
     ports:
